@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATEONLY,
       allowNull: true
     },
+    cart_total_weight: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
     cart_total_amount: {
       type: DataTypes.INTEGER,
       allowNull: true
