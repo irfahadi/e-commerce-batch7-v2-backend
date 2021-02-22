@@ -1,33 +1,37 @@
-const cart = (sequelize,DataTypes)=>{
+const cartLineItems = (sequelize,DataTypes)=>{
 
-    const cart = sequelize.define('cart', {
-      cart_id: {
+    const cart = sequelize.define('cart_line_items', {
+      clit_id: {
         autoIncrement: true,
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true
       },
-      cart_created_on: {
-        type: DataTypes.DATEONLY,
-        allowNull: true
-      },
-      cart_total_amount: {
+      clit_qty: {
         type: DataTypes.INTEGER,
         allowNull: true
       },
-      cart_total_qty: {
+      clit_subtotal: {
         type: DataTypes.INTEGER,
         allowNull: true
       },
-      cart_acco_id: {
+      clit_prod_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
         references: {
-          model: 'account',
-          key: 'acco_id'
+          model: 'product',
+          key: 'prod_id'
         }
       },
-      cart_stat_name: {
+      clit_cart_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'cart',
+          key: 'cart_id'
+        }
+      },
+      clit_stat_name: {
         type: DataTypes.STRING(10),
         allowNull: true,
         references: {
@@ -37,19 +41,19 @@ const cart = (sequelize,DataTypes)=>{
       }
     }, {
       sequelize,
-      tableName: 'cart',
+      tableName: 'cart_line_items',
       schema: 'public',
       timestamps: false,
       indexes: [
         {
-          name: "cart_pkey",
+          name: "cart_line_items_pkey",
           unique: true,
           fields: [
-            { name: "cart_id" },
+            { name: "clit_id" },
           ]
         },
       ]
     });
       return cart
 }
-export default cart
+export default cartLineItems

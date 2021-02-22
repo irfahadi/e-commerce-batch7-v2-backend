@@ -13,6 +13,7 @@ const Op = Sequelize.Op;
 
 const models = {
     cart : sequelize.import('./cart.model'),
+    cartLineItems : sequelize.import('./cartLineItems.model')
 };
 
 Object.keys(models).forEach(key => {
