@@ -2,6 +2,7 @@ import 'dotenv/config'
 import cors from "cors";
 import express from "express";
 import models, { sequelize } from './models';
+import routes from './routes';
 // import routes from './routes';
 
 const port = process.env.PORT || 1337
@@ -17,6 +18,11 @@ app.use(async (req, res, next) => {
 
 // Routes 
 // app.use('/api/cart',routes.cart);
+app.use('/status', routes.status),
+app.use('/productImages', routes.productImages)
+app.use('/productVariant', routes.productVariant)
+app.use('/product', routes.product)
+app.use('/account', routes.account)
 
 
 // Start
