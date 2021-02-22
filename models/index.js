@@ -20,7 +20,10 @@ const models = {
     kodepos   : sequelize.import('./kodepos.model'),
     address   : sequelize.import('./address.model'),
     users   : sequelize.import('./users.model'),
-    account   : sequelize.import('./account.model')
+    account   : sequelize.import('./account.model'),
+    billTopup : sequelize.import('./billTopup.model'),
+    vendor : sequelize.import('./vendor.model'),
+    vendorRules : sequelize.import ('./vendorRules.model')
 
 };
 
