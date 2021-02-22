@@ -15,12 +15,18 @@ import ordersLineItems from './ordersLineItems';
 import expedition from './expedition';
 import expeditionRoute from './expeditionRoute';
 import orderShipping from './orderShipping';
-
-
+import category from './category'
+import categoryImg from './categoryImg'
+import brand from './brand'
+import conditions from './condition'
 
 export default {
     province,
     city,
+    category,
+    categoryImg,
+    brand,
+    conditions,
     kecamatan,
     kodepos,
     address,
