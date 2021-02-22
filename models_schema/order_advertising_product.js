@@ -1,55 +1,59 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('cart', {
-    cart_id: {
+  return sequelize.define('order_advertising_product', {
+    orap_id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    cart_created_on: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
-    },
-    cart_total_weight: {
+    orap_total_click: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    cart_total_amount: {
+    orap_total_amount: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    cart_total_qty: {
+    orap_current_click: {
       type: DataTypes.INTEGER,
       allowNull: true
     },
-    cart_acco_id: {
+    orap_current_amount: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    orap_stat_name: {
+      type: DataTypes.STRING(10),
+      allowNull: true
+    },
+    orap_orad_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'account',
-        key: 'acco_id'
+        model: 'order_advertising',
+        key: 'orad_id'
       }
     },
-    cart_stat_name: {
-      type: DataTypes.STRING(15),
+    orap_prod_id: {
+      type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: 'status',
-        key: 'stat_name'
+        model: 'product',
+        key: 'prod_id'
       }
     }
   }, {
     sequelize,
-    tableName: 'cart',
+    tableName: 'order_advertising_product',
     schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "cart_pkey",
+        name: "order_advertising_product_pkey",
         unique: true,
         fields: [
-          { name: "cart_id" },
+          { name: "orap_id" },
         ]
       },
     ]

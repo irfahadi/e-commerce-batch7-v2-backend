@@ -43,8 +43,10 @@ const models = {
     expeditionRoute : sequelize.import('./expeditionRoute.model'),
     vendor : sequelize.import('./vendor.model'),
     billTopup : sequelize.import('./billTopup.model'),
-    vendorRules : sequelize.import ('./vendorRules.model')
-
+    vendorRules : sequelize.import ('./vendorRules.model'),
+    packageType     : sequelize.import('./packageType.model'),
+    orderAdvertising: sequelize.import('./orderAdvertising.model'),
+    orderAdvertisingProduct: sequelize.import('./orderAdvertisingProduct')
 };
 
 Object.keys(models).forEach(key => {

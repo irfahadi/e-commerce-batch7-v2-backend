@@ -11,6 +11,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: true
     },
+    clit_subweight: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
     clit_subtotal: {
       type: DataTypes.INTEGER,
       allowNull: true
@@ -32,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     clit_stat_name: {
-      type: DataTypes.STRING(10),
+      type: DataTypes.STRING(15),
       allowNull: true,
       references: {
         model: 'status',
