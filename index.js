@@ -24,8 +24,14 @@ app.use('/api/kodepos',routes.kodepos)
 app.use('/api/address',routes.address)
 app.use('/api/users',routes.users)
 app.use('/api/account',routes.account)
+<<<<<<< HEAD
 app.use('/api/orders',routes.orders);
 app.use('/api/ordersLineItems',routes.ordersLineItems);
+=======
+app.use('/api/expedition', routes.expedition);
+app.use('/api/expeditionroute', routes.expeditionRoute);
+app.use('/api/ordershipping', routes.orderShipping);
+>>>>>>> 963b0c414e8d4bf756f3f196a7dc88fbd748a548
 
 
 
