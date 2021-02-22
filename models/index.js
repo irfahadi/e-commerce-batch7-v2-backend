@@ -21,14 +21,12 @@ const models = {
     address   : sequelize.import('./address.model'),
     users   : sequelize.import('./users.model'),
     account   : sequelize.import('./account.model'),
-<<<<<<< HEAD
     orders : sequelize.import('./orders.model'),
     ordersLineItems : sequelize.import('./ordersLineItems.model')
 =======
     orderShipping : sequelize.import('./orderShipping.model'),
     expedition : sequelize.import('./expedition.model'),
     expeditionRoute : sequelize.import('./expeditionRoute.model')
->>>>>>> 963b0c414e8d4bf756f3f196a7dc88fbd748a548
 
 };
 
