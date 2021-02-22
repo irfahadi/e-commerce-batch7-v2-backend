@@ -32,7 +32,7 @@ const cart = (sequelize,DataTypes)=>{
         }
       },
       cart_stat_name: {
-        type: DataTypes.STRING(10),
+        type: DataTypes.STRING(15),
         allowNull: true,
         references: {
           model: 'status',
