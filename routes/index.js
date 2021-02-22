@@ -3,6 +3,9 @@ import city from './city';
 import kecamatan from './kecamatan';
 import kodepos from './kodepos';
 import address from './address';
+import users from './users';
+import account from './account';
+
 
 
 
@@ -15,5 +18,7 @@ export default {
     city,
     kecamatan,
     kodepos,
-    address
+    address,
+    users,
+    account
 }

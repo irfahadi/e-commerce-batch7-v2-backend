@@ -22,6 +22,10 @@ app.use('/api/city',routes.city)
 app.use('/api/kecamatan',routes.kecamatan)
 app.use('/api/kodepos',routes.kodepos)
 app.use('/api/address',routes.address)
+app.use('/api/users',routes.users)
+app.use('/api/account',routes.account)
+
+
 
 
 

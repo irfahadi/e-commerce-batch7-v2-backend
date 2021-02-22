@@ -18,6 +18,10 @@ const models = {
     kecamatan : sequelize.import('./kecamatan.model'),
     kodepos   : sequelize.import('./kodepos.model'),
     address   : sequelize.import('./address.model'),
+    users   : sequelize.import('./users.model'),
+    account   : sequelize.import('./account.model')
+
+
 
 
 
