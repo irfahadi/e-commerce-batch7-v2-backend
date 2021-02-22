@@ -11,6 +11,10 @@ const cartLineItems = (sequelize,DataTypes)=>{
         type: DataTypes.INTEGER,
         allowNull: true
       },
+      clit_subweight: {
+        type: DataTypes.INTEGER,
+        allowNull: true
+      },
       clit_subtotal: {
         type: DataTypes.INTEGER,
         allowNull: true
