@@ -25,7 +25,10 @@ const models = {
     ordersLineItems : sequelize.import('./ordersLineItems.model'),
     orderShipping : sequelize.import('./orderShipping.model'),
     expedition : sequelize.import('./expedition.model'),
-    expeditionRoute : sequelize.import('./expeditionRoute.model')
+    expeditionRoute : sequelize.import('./expeditionRoute.model'),
+    billTopup : sequelize.import('./billTopup.model'),
+    vendor : sequelize.import('./vendor.model'),
+    vendorRules : sequelize.import ('./vendorRules.model')
 
 };
 
