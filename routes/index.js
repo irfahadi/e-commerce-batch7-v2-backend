@@ -5,11 +5,8 @@ import kodepos from './kodepos';
 import address from './address';
 import users from './users';
 import account from './account';
-
-
-
-
-
+import orders from './orders';
+import ordersLineItems from './ordersLineItems';
 
 
 
@@ -20,5 +17,7 @@ export default {
     kodepos,
     address,
     users,
-    account
+    account,
+    orders,
+    ordersLineItems
 }

@@ -24,6 +24,8 @@ app.use('/api/kodepos',routes.kodepos)
 app.use('/api/address',routes.address)
 app.use('/api/users',routes.users)
 app.use('/api/account',routes.account)
+app.use('/api/orders',routes.orders);
+app.use('/api/ordersLineItems',routes.ordersLineItems);
 
 
 
