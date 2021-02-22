@@ -13,7 +13,15 @@ const Op = Sequelize.Op;
 
 const models = {
     cart : sequelize.import('./cart.model'),
-    cartLineItems : sequelize.import('./cartLineItems.model')
+    cartLineItems : sequelize.import('./cartLineItems.model'),
+    province  : sequelize.import('./province.model'),
+    city      : sequelize.import('./city.model'),
+    kecamatan : sequelize.import('./kecamatan.model'),
+    kodepos   : sequelize.import('./kodepos.model'),
+    address   : sequelize.import('./address.model'),
+    users   : sequelize.import('./users.model'),
+    account   : sequelize.import('./account.model')
+
 };
 
 Object.keys(models).forEach(key => {
