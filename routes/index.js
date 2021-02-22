@@ -19,6 +19,11 @@ import category from './category'
 import categoryImg from './categoryImg'
 import brand from './brand'
 import conditions from './condition'
+import bank from './bank'
+import bankAccount from './bankAccount'
+import paymentType from './paymentType'
+import wallet from './wallet'
+import walletTransaction from './walletTransaction'
 
 export default {
     province,
@@ -40,5 +45,10 @@ export default {
     ordersLineItems,
     expedition,
     expeditionRoute,
-    orderShipping
+    orderShipping,
+    bank,
+    bankAccount,
+    paymentType,
+    wallet,
+    walletTransaction
 }

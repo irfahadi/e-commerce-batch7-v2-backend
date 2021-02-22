@@ -38,6 +38,11 @@ app.use('/api/ordersLineItems',routes.ordersLineItems);
 app.use('/api/expedition', routes.expedition);
 app.use('/api/expeditionroute', routes.expeditionRoute);
 app.use('/api/ordershipping', routes.orderShipping);
+app.use('/api/wallet',routes.wallet)
+app.use('/api/bank',routes.bank)
+app.use('/api/walletTransaction',routes.walletTransaction)
+app.use('/api/paymentType',routes.paymentType)
+app.use('/api/bankAccount',routes.bankAccount)
 
 // Start
 const dropDatabaseSync = false;

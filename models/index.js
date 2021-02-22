@@ -10,15 +10,14 @@ export const sequelize = new Sequelize(
     process.env.DATABASE_PASSWORD,
     {
       dialect: 'postgres',
-      host: '192.168.100.254'
     },
   );
 
 const Op = Sequelize.Op;
 
 const models = {
-    //cart : sequelize.import('./cart.model'),
     status          : sequelize.import('./status.model'),
+    cart            : sequelize.import('./cart.model'),
     category        : sequelize.import('./category.model'),
     brand           : sequelize.import('./brand.model'),
     condition       : sequelize.import('./condition.model'),
@@ -46,7 +45,13 @@ const models = {
     vendorRules : sequelize.import ('./vendorRules.model'),
     packageType     : sequelize.import('./packageType.model'),
     orderAdvertising: sequelize.import('./orderAdvertising.model'),
-    orderAdvertisingProduct: sequelize.import('./orderAdvertisingProduct')
+    orderAdvertisingProduct: sequelize.import('./orderAdvertisingProduct.model'),
+    bank : sequelize.import('./bank.model'),
+    paymentType : sequelize.import('./paymentType.model'),
+    bankAccount : sequelize.import('./bankAccount.model'),
+    wallet : sequelize.import('./wallet.model'),
+    walletTransaction : sequelize.import('./walletTransaction.model'),
+
 };
 
 Object.keys(models).forEach(key => {
