@@ -12,7 +12,18 @@ export const sequelize = new Sequelize(
 const Op = Sequelize.Op;
 
 const models = {
-    cart : sequelize.import('./cart.model'),
+    cart      : sequelize.import('./cart.model'),
+    province  : sequelize.import('./province.model'),
+    city      : sequelize.import('./city.model'),
+    kecamatan : sequelize.import('./kecamatan.model'),
+    kodepos   : sequelize.import('./kodepos.model'),
+    address   : sequelize.import('./address.model'),
+
+
+
+
+
+
 };
 
 Object.keys(models).forEach(key => {
