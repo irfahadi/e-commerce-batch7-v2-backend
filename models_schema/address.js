@@ -1,55 +1,59 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('cart', {
-    cart_id: {
+  return sequelize.define('address', {
+    addr_id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    cart_created_on: {
-      type: DataTypes.DATEONLY,
+    addr_address: {
+      type: DataTypes.STRING(255),
       allowNull: true
     },
-    cart_total_weight: {
+    addr_optional: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    addr_is_primary: {
+      type: DataTypes.BOOLEAN,
+      allowNull: true
+    },
+    addr_langitude: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    addr_latitude: {
+      type: DataTypes.STRING(100),
+      allowNull: true
+    },
+    addr_kodepos: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      references: {
+        model: 'kodepos',
+        key: 'kodepos'
+      }
     },
-    cart_total_amount: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    cart_total_qty: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    cart_acco_id: {
+    addr_accu_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
       references: {
         model: 'account',
         key: 'acco_id'
       }
-    },
-    cart_stat_name: {
-      type: DataTypes.STRING(10),
-      allowNull: true,
-      references: {
-        model: 'status',
-        key: 'stat_name'
-      }
     }
   }, {
     sequelize,
-    tableName: 'cart',
+    tableName: 'address',
     schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "cart_pkey",
+        name: "address_pkey",
         unique: true,
         fields: [
-          { name: "cart_id" },
+          { name: "addr_id" },
         ]
       },
     ]

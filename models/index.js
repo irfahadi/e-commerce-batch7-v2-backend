@@ -18,16 +18,23 @@ const Op = Sequelize.Op;
 
 const models = {
     //cart : sequelize.import('./cart.model'),
-    status : sequelize.import('./status.model'),
-    productImages: sequelize.import('./productImages.model'),
-    productVariant : sequelize.import('./productVariant.model'),
-    product : sequelize.import('./product.model'),
-    account : sequelize.import('./account.model'),
-    brand : sequelize.import('./brand.model'),
-    category: sequelize.import('./category.model'),
-    categoryImg: sequelize.import('./categoryImg.model'),
-    condition : sequelize.import('./condition.model'),
-
+    status          : sequelize.import('./status.model'),
+    productImages   : sequelize.import('./productImages.model'),
+    productVariant  : sequelize.import('./productVariant.model'),
+    product         : sequelize.import('./product.model'),
+    brand           : sequelize.import('./brand.model'),
+    category        : sequelize.import('./category.model'),
+    categoryImg     : sequelize.import('./categoryImg.model'),
+    condition       : sequelize.import('./condition.model'),
+    cart            : sequelize.import('./cart.model'),
+    cartLineItems   : sequelize.import('./cartLineItems.model'),
+    province        : sequelize.import('./province.model'),
+    city            : sequelize.import('./city.model'),
+    kecamatan       : sequelize.import('./kecamatan.model'),
+    kodepos         : sequelize.import('./kodepos.model'),
+    address         : sequelize.import('./address.model'),
+    users           : sequelize.import('./users.model'),
+    account         : sequelize.import('./account.model')
 
 };
 

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import provaCtrl from "../controller/productVariant.controller";
+import provaCtrl from "../controllers/productVariant.controller";
 
 const router = Router ();
 router.get('/', provaCtrl.readProva)

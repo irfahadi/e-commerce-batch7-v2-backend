@@ -1,5 +1,5 @@
 import { Router} from 'express'
-import primCtrl from "../controller/productImages.controller"
+import primCtrl from "../controllers/productImages.controller"
 
 const router = Router()
 
