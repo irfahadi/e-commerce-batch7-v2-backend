@@ -1,22 +1,30 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('status', {
-    stat_name: {
+  return sequelize.define('package_type', {
+    pack_name: {
       type: DataTypes.STRING(10),
       allowNull: false,
       primaryKey: true
+    },
+    pack_desc: {
+      type: DataTypes.STRING(55),
+      allowNull: true
+    },
+    pack_duration: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'status',
+    tableName: 'package_type',
     schema: 'public',
     timestamps: false,
     indexes: [
       {
-        name: "status_pkey",
+        name: "package_type_pkey",
         unique: true,
         fields: [
-          { name: "stat_name" },
+          { name: "pack_name" },
         ]
       },
     ]

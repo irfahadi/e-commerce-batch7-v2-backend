@@ -3,7 +3,6 @@ import cors from "cors";
 import express from "express";
 import models, { sequelize } from './models';
 import routes from './routes';
-// import routes from './routes';
 
 
 const app = express();
@@ -18,20 +17,12 @@ app.use(async (req, res, next) => {
 
 // Routes 
 // app.use('/api/cart',routes.cart);
-app.use('/api/status', routes.status),
-app.use('/api/productImages', routes.productImages),
-app.use('/api/productVariant', routes.productVariant),
-app.use('/api/product', routes.product),
-app.use('/api/category', routes.category),
-app.use('/api/categoryImages', routes.categoryImg),
-app.use('/api/brand', routes.brand),
-app.use('/api/conditions', routes.conditions),
-app.use('/api/province',routes.province),
-app.use('/api/city',routes.city),
-app.use('/api/kecamatan',routes.kecamatan),
-app.use('/api/kodepos',routes.kodepos),
-app.use('/api/address',routes.address),
-app.use('/api/users',routes.users),
+app.use('/api/province',routes.province)
+app.use('/api/city',routes.city)
+app.use('/api/kecamatan',routes.kecamatan)
+app.use('/api/kodepos',routes.kodepos)
+app.use('/api/address',routes.address)
+app.use('/api/users',routes.users)
 app.use('/api/account',routes.account)
 app.use('/api/orders',routes.orders);
 app.use('/api/ordersLineItems',routes.ordersLineItems);
