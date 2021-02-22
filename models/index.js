@@ -34,7 +34,12 @@ const models = {
     kodepos         : sequelize.import('./kodepos.model'),
     address         : sequelize.import('./address.model'),
     users           : sequelize.import('./users.model'),
-    account         : sequelize.import('./account.model')
+    account         : sequelize.import('./account.model'),
+    orders : sequelize.import('./orders.model'),
+    ordersLineItems : sequelize.import('./ordersLineItems.model'),
+    orderShipping : sequelize.import('./orderShipping.model'),
+    expedition : sequelize.import('./expedition.model'),
+    expeditionRoute : sequelize.import('./expeditionRoute.model')
 
 };
 

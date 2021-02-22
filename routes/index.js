@@ -10,11 +10,11 @@ import kodepos from './kodepos';
 import address from './address';
 import users from './users';
 import account from './account';
-
-
-
-
-
+import orders from './orders';
+import ordersLineItems from './ordersLineItems';
+import expedition from './expedition';
+import expeditionRoute from './expeditionRoute';
+import orderShipping from './orderShipping';
 
 
 
@@ -30,4 +30,9 @@ export default {
     productImages,
     productVariant,
     product,
+    orders,
+    ordersLineItems,
+    expedition,
+    expeditionRoute,
+    orderShipping
 }
