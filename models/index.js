@@ -16,8 +16,14 @@ export const sequelize = new Sequelize(
 const Op = Sequelize.Op;
 
 const models = {
+    users           : sequelize.import('./users.model'),
+    account         : sequelize.import('./account.model'),
     status          : sequelize.import('./status.model'),
-    cart            : sequelize.import('./cart.model'),
+    bank            : sequelize.import('./bank.model'),
+    paymentType     : sequelize.import('./paymentType.model'),
+    bankAccount     : sequelize.import('./bankAccount.model'),
+    wallet          : sequelize.import('./wallet.model'),
+    walletTransaction : sequelize.import('./walletTransaction.model'),
     category        : sequelize.import('./category.model'),
     brand           : sequelize.import('./brand.model'),
     condition       : sequelize.import('./condition.model'),
@@ -32,8 +38,6 @@ const models = {
     kecamatan       : sequelize.import('./kecamatan.model'),
     kodepos         : sequelize.import('./kodepos.model'),
     address         : sequelize.import('./address.model'),
-    users           : sequelize.import('./users.model'),
-    account         : sequelize.import('./account.model'),
     orders : sequelize.import('./orders.model'),
     ordersLineItems : sequelize.import('./ordersLineItems.model'),
     expedition : sequelize.import('./expedition.model'),
@@ -46,11 +50,6 @@ const models = {
     packageType     : sequelize.import('./packageType.model'),
     orderAdvertising: sequelize.import('./orderAdvertising.model'),
     orderAdvertisingProduct: sequelize.import('./orderAdvertisingProduct.model'),
-    bank : sequelize.import('./bank.model'),
-    paymentType : sequelize.import('./paymentType.model'),
-    bankAccount : sequelize.import('./bankAccount.model'),
-    wallet : sequelize.import('./wallet.model'),
-    walletTransaction : sequelize.import('./walletTransaction.model'),
 
 };
 
